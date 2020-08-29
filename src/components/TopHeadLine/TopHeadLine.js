@@ -5,7 +5,7 @@ const TopHeadLine = () => {
     const [news, setNews] = useState([]);
 
     useEffect(() => {
-        fetch('https://newsapi.org/v2/top-headlines?country=us&apiKey=85f4365db19845298708f4616c6fbdbc')
+        fetch('http://newsapi.org/v2/top-headlines?country=us&apiKey=85f4365db19845298708f4616c6fbdbc')
         .then(response => response.json())
         .then(data => setNews(data.articles))
     }, [])
