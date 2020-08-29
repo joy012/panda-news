@@ -11,12 +11,14 @@ const TopHeadLine = () => {
     }, [])
     return (
         // fragment <> </> do the same work as a div do in returning multiple tag together. but fragment doesn't create a extra div in the virtual dom
-        <React.Fragment>
+        <>
             <h1 className="text-center">Top Headlines: {news.length}</h1>
+            <div className="news">
             {
                 news.map(article => <News article={article}></News>)
             }
-        </React.Fragment>
+            </div>
+        </>
     );
 };
 
